@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import Profile, { ProfileData } from './Profile'
+import Profile from './Profile'
 
 type ViewState = 'landing' | 'profile'
 
@@ -34,7 +34,7 @@ function App() {
           </button>
         </section>
       ) : (
-        <Profile />
+        <Profile onBack={() => setView('landing')} />
       )}
 
       {view === 'landing' && (
